@@ -11,14 +11,14 @@
     <body class="bg-paper font-sans leading-normal text-grey-darkest border-t-4 border-orange-light">
         {!! ssr('js/react/entry-server.js')
             // Share the packages with the server script through context
-            ->context('packages', $packages)
+            ->context('data', $data)
             // If ssr fails, we need a container to render the app client-side
             ->fallback('<div id="app"></div>')
             ->render() !!}
 
         <script>
             // Share the packages with the client script through a JS variable
-            window.__PRELOADED_STATE__ = @json(['packages' => $packages])
+            window.__PRELOADED_STATE__ = @json(['data' => $data])
         </script>
 
         <footer class="max-w-md mx-auto px-8 mt-12 mb-4 text-xs text-grey-light">

@@ -14,13 +14,7 @@ class MyObject {
 
 class ReactController extends Controller
 {
-     public function __invoke()
-    {
-        return view('react', [
-            'packages' => $this->getPackages(),
-        ]);
-    }
-    
+
     public function home(){
         return view('react', [
             'data' => [

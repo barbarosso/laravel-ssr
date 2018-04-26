@@ -6,7 +6,7 @@ import { withRouter, Route, Link } from 'react-router-dom';
 
 const App = ({ packages, test, location }) => (
     <div className="max-w-md mt-8 sm:mt-16 mx-auto px-8">
-        {console.log(packages, test)}
+        {console.log(package, test)}
         <Link
             to="/react/"
             className={`text-xs text-grey-light inline-block mb-2 ${

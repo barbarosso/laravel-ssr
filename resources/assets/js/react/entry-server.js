@@ -6,12 +6,12 @@ import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 
 // Compile an initial state
-const { packages } = context;
+const { data: { packages, test } } = context;
 
 const html = ReactDOMServer.renderToString(
     <div id="app">
         <StaticRouter location={context.url}>
-            <App packages={packages} />
+            <App packages={packages} test={test} />
         </StaticRouter>
     </div>
 );

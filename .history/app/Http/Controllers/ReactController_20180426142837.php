@@ -20,7 +20,6 @@ class ReactController extends Controller
             'packages' => $this->getPackages(),
         ]);
     }
-    
     public function home(){
         return view('react', [
             'data' => [

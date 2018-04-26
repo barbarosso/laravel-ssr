@@ -20,3 +20,7 @@ Route::get('vue/{url?}', 'VueController');
 Route::get('react/home', 'ReactController@home');
 
 Route::get('react/test', 'ReactController@test');
+
+Route::get('react/{url?}', 'ReactController');
+
+
